@@ -1,0 +1,6 @@
+all:
+  children:
+    panos:
+      hosts:
+        dallas:
+          ansible_host: "dallas-vfw-01.redtail.com"

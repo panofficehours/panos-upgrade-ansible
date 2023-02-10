@@ -1,0 +1,20 @@
+---
+#------------------------------------------------------------------------
+# UPDATE PAN-OS
+#------------------------------------------------------------------------
+- hosts: dallas
+  connection: local
+  gather_facts: False
+  become: False
+  collections:
+    - paloaltonetworks.panos
+
+  tasks:
+    - name: Install PAN-OS 10.2.3-h2 and restart
+      panos_software:
+        provider:
+          api_key: "LUFRPT0wUFpqeWFUa3IvTk9OVE1Ic0svUm01REFUd3M9R0JIQ1lpK0wrNEU4UVZOdzNka0dpc2F3OWtXNWlIMURwL3NhbEt1elcvSEoxL05UOVlxOURWY1ZaalpGaW5WOQ=="
+          ip_address: "{{ ansible_host }}"
+        version: "10.2.3-h2"
+        restart: true
+        install: true

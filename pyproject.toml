@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "panos-upgrade-ansible"
+version = "0.1.0"
+description = "This is an example repo for upgrading PAN-OS with Ansible"
+authors = ["Network Automation <panofficehours@proton.me>"]
+license = "Apache2.0"
+readme = "README.md"
+packages = [{include = "panos_upgrade_ansible"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ansible = "^7.2.0"
+pan-os-python = "^1.8.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
